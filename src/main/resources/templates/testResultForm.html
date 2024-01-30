@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>DL Test Result</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>DL Test Result</h1>
+    <form action="#" th:action="@{/dl/result/submit}" th:object="${dlResultModel}" method="post">
+        <table>
+            <tr>
+                <td>Application ID: </td>
+                <td><input type="text" th:field="*{applicationid}" /></td>
+            </tr>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" th:field="*{name}" /></td>
+            </tr>
+            <tr>
+                <td>Address: </td>
+                <td><input type="text" th:field="*{address}" /></td>
+            </tr>
+            <tr>
+                <td>Mobile: </td>
+                <td><input type="text" th:field="*{mobile}" /></td>
+            </tr>
+            <tr>
+                <td>Test Date: </td>
+                <td><input type="text" th:field="*{test_date}" /></td>
+            </tr>
+            <tr>
+                <td>Test Slot: </td>
+                <td><input type="text" th:field="*{test_slot}" /></td>
+            </tr>
+            <tr>
+                <td>Test Status: </td>
+                <td><input type="text" th:field="*{test_status}" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" /> </td>
+                <td><input type="reset" value="Reset" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
